@@ -56,8 +56,8 @@ public class MusicDownloadService {
 
         mClient = new DefaultHttpClient();
         if (username != null && !"".equals(username)) {
-            Credentials defaultcreds = new UsernamePasswordCredentials("dag",
-                    "test");
+            Credentials defaultcreds = new UsernamePasswordCredentials(username,
+                    password);
             mClient.getCredentialsProvider().setCredentials(AuthScope.ANY,
                     defaultcreds);
         }
