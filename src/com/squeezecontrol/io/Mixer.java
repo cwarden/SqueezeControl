@@ -15,11 +15,11 @@ public class Mixer {
     }
 
     public void increaseVolume() {
-        player.sendCommand("mixer volume +5");
+        player.sendCommand("mixer volume +2");
     }
 
     public void decreaseVolume() {
-        player.sendCommand("mixer volume -5");
+        player.sendCommand("mixer volume -2");
     }
 
 }
