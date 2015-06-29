@@ -55,8 +55,8 @@ public class HttpFetchingImageStore implements ImageStore {
         ClientConnectionManager mgr = new ThreadSafeClientConnManager(params, schemeRegistry);
         mClient = new DefaultHttpClient(mgr, params);
         if (username != null && !"".equals(username)) {
-            Credentials defaultcreds = new UsernamePasswordCredentials("dag",
-                    "test");
+            Credentials defaultcreds = new UsernamePasswordCredentials(username,
+                    password);
             mClient.getCredentialsProvider().setCredentials(AuthScope.ANY,
                     defaultcreds);
         }
